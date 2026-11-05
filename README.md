@@ -10,8 +10,8 @@ Global Solution 2026/2 · Front-End Design Engineering · FIAP 1TDS
 
 | | |
 |---|---|
-| 🌐 **Aplicação (Vercel)** | _https://cuidai.vercel.app_ ← trocar |
-| 💻 **GitHub** | _https://github.com/usuario/cuidai-front_ ← trocar |
+| 🌐 **Aplicação (Vercel)** | https://cuidai-front.vercel.app |
+| 💻 **GitHub** | https://github.com/enzoleiva2008-blip/cuidai-front |
 | ☕ **API Java (Render)** | _https://cuidai-api.onrender.com_ ← trocar |
 | 🎬 **Vídeo (YouTube)** | _link_ ← trocar |
 
