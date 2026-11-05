@@ -1,0 +1,16 @@
+@import 'tailwindcss';
+
+/* Cores e fonte do CuidAí, usadas nas classes do Tailwind (ex.: bg-marca-600) */
+@theme {
+  --color-marca-50: #f0fdfa;
+  --color-marca-100: #ccfbf1;
+  --color-marca-600: #0d9488;
+  --color-marca-700: #0f766e;
+  --color-marca-800: #115e59;
+  --color-marca-900: #134e4a;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

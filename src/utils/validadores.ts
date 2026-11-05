@@ -1,0 +1,46 @@
+// Validações feitas no front ANTES de enviar para a API.
+// Cada função devolve a mensagem de erro, ou undefined se o valor está ok.
+
+export function obrigatorio(valor: string, nomeCampo: string): string | undefined {
+  return valor.trim() === '' ? `${nomeCampo} é obrigatório.` : undefined
+}
+
+export function somenteNumeros(valor: string): string {
+  return valor.replace(/\D/g, '')
+}
+
+export function validarCpf(cpf: string): string | undefined {
+  const numeros = somenteNumeros(cpf)
+  if (numeros === '') return 'CPF é obrigatório.'
+  if (numeros.length !== 11) return 'O CPF precisa ter 11 números.'
+  return undefined
+}
+
+export function validarCartaoSus(cartao: string): string | undefined {
+  const numeros = somenteNumeros(cartao)
+  if (numeros === '') return 'Cartão SUS é obrigatório.'
+  if (numeros.length !== 15) return 'O Cartão SUS precisa ter 15 números.'
+  return undefined
+}
+
+export function validarTelefone(telefone: string): string | undefined {
+  const numeros = somenteNumeros(telefone)
+  if (numeros === '') return 'Telefone é obrigatório.'
+  if (numeros.length < 10 || numeros.length > 11) return 'Informe DDD + número (10 ou 11 dígitos).'
+  return undefined
+}
+
+export function validarEmail(email: string, obrigatorioPreencher = false): string | undefined {
+  if (email.trim() === '') return obrigatorioPreencher ? 'E-mail é obrigatório.' : undefined
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? undefined : 'Informe um e-mail válido.'
+}
+
+export function validarDataPassada(data: string, nomeCampo: string): string | undefined {
+  if (data === '') return `${nomeCampo} é obrigatória.`
+  return new Date(data) >= new Date() ? `${nomeCampo} deve estar no passado.` : undefined
+}
+
+export function validarDataFutura(dataHora: string): string | undefined {
+  if (dataHora === '') return 'Escolha a data e o horário.'
+  return new Date(dataHora) <= new Date() ? 'Escolha uma data e horário no futuro.' : undefined
+}
