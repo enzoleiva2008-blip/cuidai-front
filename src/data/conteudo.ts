@@ -1,33 +1,42 @@
 import type { Especialidade, Integrante, PerguntaFaq } from '../types'
 
-// ⚠️ TROCAR pelos dados reais do grupo (nome, RM, links e foto)
+// Integrantes do grupo. foto é opcional: caminho em /public, ex.: '/fotos/568877.jpg'
 export const INTEGRANTES: Integrante[] = [
   {
-    rm: '000001',
-    nome: 'Integrante 1',
-    turma: '1TDS',
-    papel: 'Front-end e UX',
-    github: 'https://github.com/',
-    linkedin: 'https://www.linkedin.com/',
-    foto: '', // opcional: caminho da foto em /public, ex.: '/fotos/rm000001.jpg'
+    rm: '568877',
+    nome: 'Enzo Leiva',
+    turma: '1TDSPO',
+    papel: 'Front-end e integração',
+    github: 'https://github.com/enzoleiva2008-blip',
+    linkedin: 'https://www.linkedin.com/in/enzo-leiva-varrichio-88ba273a1/',
+    foto: '',
   },
   {
-    rm: '000002',
-    nome: 'Integrante 2',
-    turma: '1TDS',
+    rm: '570878',
+    nome: 'Matheus Segura',
+    turma: '1TDSPO',
+    papel: 'Banco de dados Oracle',
+    github: 'https://github.com/MatheuSegura',
+    linkedin: 'https://www.linkedin.com/in/matheussegura/',
+    foto: '',
+  },
+  {
+    rm: '572369',
+    nome: 'Kauã Fiuza',
+    turma: '1TDSPO',
     papel: 'Back-end Java',
-    github: 'https://github.com/',
-    linkedin: 'https://www.linkedin.com/',
-    foto: '', // opcional: caminho da foto em /public, ex.: '/fotos/rm000001.jpg'
+    github: 'https://github.com/KauaznX',
+    linkedin: 'https://www.linkedin.com/in/kau%C3%A3-fiuza-94a039313/',
+    foto: '',
   },
   {
-    rm: '000003',
-    nome: 'Integrante 3',
-    turma: '1TDS',
-    papel: 'Banco de dados e IA',
-    github: 'https://github.com/',
-    linkedin: 'https://www.linkedin.com/',
-    foto: '', // opcional: caminho da foto em /public, ex.: '/fotos/rm000001.jpg'
+    rm: '572499',
+    nome: 'Lucas Almeida',
+    turma: '1TDSPO',
+    papel: 'Python e Inteligência Artificial',
+    github: 'https://github.com/LucasAlmeidaOliveira',
+    linkedin: 'https://www.linkedin.com/in/lucasalmeidaoliva',
+    foto: '',
   },
 ]
 

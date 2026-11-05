@@ -12,7 +12,7 @@ Global Solution 2026/2 · Front-End Design Engineering · FIAP 1TDS
 |---|---|
 | 🌐 **Aplicação (Vercel)** | https://cuidai-front.vercel.app |
 | 💻 **GitHub** | https://github.com/enzoleiva2008-blip/cuidai-front |
-| ☕ **API Java (Render)** | _https://cuidai-api.onrender.com_ ← trocar |
+| ☕ **API Java (Render)** | https://cuidai-api.onrender.com · [repositório](https://github.com/enzoleiva2008-blip/cuidai-api) |
 | 🎬 **Vídeo (YouTube)** | _link_ ← trocar |
 
 ## Tecnologias
@@ -81,8 +81,10 @@ Para gerar a versão de produção: `npm run build`.
 
 | Nome | RM | Turma | GitHub | LinkedIn |
 |---|---|---|---|---|
-| _preencher_ | _rm_ | 1TDS | _link_ | _link_ |
-| _preencher_ | _rm_ | 1TDS | _link_ | _link_ |
+| Enzo Leiva | 568877 | 1TDSPO | [enzoleiva2008-blip](https://github.com/enzoleiva2008-blip) | [LinkedIn](https://www.linkedin.com/in/enzo-leiva-varrichio-88ba273a1/) |
+| Matheus Segura | 570878 | 1TDSPO | [MatheuSegura](https://github.com/MatheuSegura) | [LinkedIn](https://www.linkedin.com/in/matheussegura/) |
+| Kauã Fiuza | 572369 | 1TDSPO | [KauaznX](https://github.com/KauaznX) | [LinkedIn](https://www.linkedin.com/in/kau%C3%A3-fiuza-94a039313/) |
+| Lucas Almeida | 572499 | 1TDSPO | [LucasAlmeidaOliveira](https://github.com/LucasAlmeidaOliveira) | [LinkedIn](https://www.linkedin.com/in/lucasalmeidaoliva) |
 
 ## Contato
 

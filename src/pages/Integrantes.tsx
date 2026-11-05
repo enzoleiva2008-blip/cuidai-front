@@ -8,7 +8,7 @@ export default function Integrantes() {
   return (
     <>
       <CabecalhoPagina titulo="Integrantes" subtitulo="Quem construiu o CuidAí. Clique em um integrante para ver os detalhes." />
-      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-4 sm:grid-cols-2">
         {INTEGRANTES.map((integrante) => (
           <li key={integrante.rm}>
             <Link to={`/integrantes/${integrante.rm}`} className="block rounded-xl focus-visible:outline-2 focus-visible:outline-marca-700">
