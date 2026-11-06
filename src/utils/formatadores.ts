@@ -18,6 +18,19 @@ export function formatarCpf(cpf: string): string {
   return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4')
 }
 
+/** "11987654321" -> "(11) 98765-4321" · "1134567890" -> "(11) 3456-7890" */
+export function formatarTelefone(telefone: string): string {
+  const numeros = telefone.replace(/\D/g, '')
+  if (numeros.length === 11) return numeros.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')
+  if (numeros.length === 10) return numeros.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3')
+  return telefone
+}
+
+/** "898001234567890" -> "898 0012 3456 7890" */
+export function formatarCartaoSus(cartao: string): string {
+  return cartao.replace(/\D/g, '').replace(/(\d{3})(\d{4})(\d{4})(\d{4})/, '$1 $2 $3 $4')
+}
+
 export const NOME_PRIORIDADE: Record<Prioridade, string> = {
   1: 'Alta',
   2: 'Média',
