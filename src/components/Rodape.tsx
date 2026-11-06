@@ -15,12 +15,14 @@ export function Rodape() {
             <li><Link className="hover:underline" to="/consultas">Consultas e fila</Link></li>
             <li><Link className="hover:underline" to="/faq">Perguntas frequentes</Link></li>
             <li><Link className="hover:underline" to="/contato">Fale conosco</Link></li>
+            <li><Link className="hover:underline" to="/integrantes">Quem somos</Link></li>
           </ul>
         </nav>
         <p className="text-sm">
           Global Solution 2026/2 · CitizenTech · FIAP 1TDS
           <br />
           Projeto acadêmico. Dados fictícios.
+          <br />© {new Date().getFullYear()} CuidAí
         </p>
       </div>
     </footer>
