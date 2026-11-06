@@ -13,7 +13,22 @@ export function validarCpf(cpf: string): string | undefined {
   const numeros = somenteNumeros(cpf)
   if (numeros === '') return 'CPF é obrigatório.'
   if (numeros.length !== 11) return 'O CPF precisa ter 11 números.'
+  if (/^(\d)\1{10}$/.test(numeros)) return 'CPF inválido.'
+  if (!digitosCpfConferem(numeros)) return 'CPF inválido. Confira os números.'
   return undefined
+}
+
+/** Confere os 2 dígitos verificadores do CPF (regra oficial da Receita). */
+function digitosCpfConferem(cpf: string): boolean {
+  const calcularDigito = (base: string, pesoInicial: number) => {
+    let soma = 0
+    for (let i = 0; i < base.length; i++) soma += Number(base[i]) * (pesoInicial - i)
+    const resto = (soma * 10) % 11
+    return resto === 10 ? 0 : resto
+  }
+  const digito1 = calcularDigito(cpf.slice(0, 9), 10)
+  const digito2 = calcularDigito(cpf.slice(0, 10), 11)
+  return digito1 === Number(cpf[9]) && digito2 === Number(cpf[10])
 }
 
 export function validarCartaoSus(cartao: string): string | undefined {
