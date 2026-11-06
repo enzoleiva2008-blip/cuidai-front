@@ -66,6 +66,11 @@ export const PERGUNTAS_FAQ: PerguntaFaq[] = [
       'O chatbot do CuidAí envia um lembrete pelo WhatsApp um dia antes. É só responder "1" para confirmar. Se não puder ir, você pode cancelar e liberar o horário para outra pessoa.',
   },
   {
+    pergunta: 'Como cancelo uma consulta?',
+    resposta:
+      'Entre em "Consultas", abra a consulta e toque em "Não vou poder ir · Cancelar". A vaga volta para a fila na hora e outra pessoa pode ser atendida no seu lugar.',
+  },
+  {
     pergunta: 'Preciso pagar alguma coisa?',
     resposta: 'Não. O CuidAí é gratuito para o cidadão, assim como o atendimento no SUS.',
   },
