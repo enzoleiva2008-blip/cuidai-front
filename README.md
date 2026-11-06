@@ -92,4 +92,4 @@ contato@cuidai.com.br (fictício) · ou pelos perfis dos integrantes acima
 
 ## Uso de IA generativa
 
-Usamos o Claude (Anthropic) como apoio na estrutura do projeto e na revisão do código. Todo o código foi revisado, testado e entendido pelo grupo.
+O código deste projeto foi gerado em grande parte com o Claude (Anthropic), a partir das decisões do grupo. O grupo é responsável por revisar, testar e saber explicar cada parte.
