@@ -55,27 +55,30 @@ src/
 
 Todas as páginas que usam a API mostram **carregando**, **erro** e **ausência de dados**.
 
-## Como executar
+## Como rodar localmente
 
 Pré-requisito: **Node.js 20 ou mais novo**.
 
-```bash
-npm install
-```
+1. Instale as dependências:
+	```bash
+	npm install
+	```
+2. Copie `.env.example` para `.env` na raiz do projeto e ajuste a URL da API, se necessário.
+3. Inicie o servidor de desenvolvimento:
+	```bash
+	npm run dev
+	```
+4. Abra `http://localhost:5173`.
+5. Para verificar a compilação de produção, rode:
+	```bash
+	npm run build
+	```
 
-Crie um arquivo `.env` na raiz, copiando o `.env.example`, com a URL da API:
+## Variáveis de ambiente
 
-```
-VITE_API_URL=http://localhost:8080
-```
-
-```bash
-npm run dev
-```
-
-Abra `http://localhost:5173`.
-
-Para gerar a versão de produção: `npm run build`.
+| Variável | Descrição | Exemplo |
+|---|---|---|
+| `VITE_API_URL` | URL base da API Java consumida pelo front-end. Use a URL local durante o desenvolvimento ou a URL publicada no deploy, sem barra no final. | `http://localhost:8080` |
 
 ## Integrantes
 
