@@ -14,7 +14,7 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900">
-      <a href="#conteudo" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-30 focus:rounded focus:bg-white focus:p-2">
+      <a href="#conteudo" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-30 focus:rounded focus:bg-white focus:p-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-700">
         Pular para o conteúdo
       </a>
       <Cabecalho />
