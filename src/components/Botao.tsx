@@ -17,7 +17,15 @@ const ESTILOS: Record<Variante, string> = {
 }
 
 /** Botão padrão do CuidAí, com estado de carregamento. */
-export function Botao({ variante = 'primario', carregando = false, disabled, children, className = '', to, ...props }: BotaoProps) {
+export function Botao({
+  variante = 'primario',
+  carregando = false,
+  disabled,
+  children,
+  className = '',
+  to,
+  ...props
+}: BotaoProps) {
   const classes = `inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-2.5 font-semibold
     transition focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60
     ${ESTILOS[variante]} ${className}`
@@ -37,7 +45,10 @@ export function Botao({ variante = 'primario', carregando = false, disabled, chi
       className={classes}
     >
       {carregando && (
-        <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" aria-hidden="true" />
+        <span
+          className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"
+          aria-hidden="true"
+        />
       )}
       {carregando ? 'Aguarde...' : children}
     </button>
