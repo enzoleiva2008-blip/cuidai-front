@@ -15,6 +15,8 @@ interface DadosContato {
 
 type Erros = Partial<Record<keyof DadosContato, string>>
 
+const LIMITE_MENSAGEM = 500
+
 const VAZIO: DadosContato = { nome: '', email: '', assunto: '', mensagem: '' }
 
 export default function Contato() {
@@ -68,12 +70,15 @@ export default function Contato() {
               <label htmlFor="mensagem" className="font-medium text-slate-800">
                 Mensagem <span className="text-red-600" aria-hidden="true">*</span>
               </label>
-              <textarea id="mensagem" rows={5} value={dados.mensagem}
+              <textarea id="mensagem" rows={5} value={dados.mensagem} maxLength={LIMITE_MENSAGEM}
                 aria-invalid={erros.mensagem ? true : undefined}
-                aria-describedby={erros.mensagem ? 'mensagem-erro' : undefined}
+                aria-describedby={erros.mensagem ? 'mensagem-erro mensagem-contador' : 'mensagem-contador'}
                 onChange={(e) => alterar('mensagem', e.target.value)}
                 className={`w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-marca-600 ${
                   erros.mensagem ? 'border-red-500 bg-red-50' : 'border-slate-300 bg-white'}`} />
+              <p id="mensagem-contador" className="self-end text-sm text-slate-500">
+                {dados.mensagem.length}/{LIMITE_MENSAGEM} caracteres
+              </p>
               {erros.mensagem && <p id="mensagem-erro" className="text-sm text-red-700">{erros.mensagem}</p>}
             </div>
             <Botao type="submit" className="self-start">Enviar mensagem</Botao>
