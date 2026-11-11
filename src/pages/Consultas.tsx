@@ -21,11 +21,17 @@ export default function Consultas() {
   const [aba, setAba] = useState<Aba>('fila')
   const [filtroStatus, setFiltroStatus] = useState<StatusConsulta | ''>('')
 
-  useEffect(() => {
+  function carregar() {
+    setCarregando(true)
+    setErro(null)
     listarConsultas()
       .then(setConsultas)
       .catch((e) => setErro(mensagemDeErro(e)))
       .finally(() => setCarregando(false))
+  }
+
+  useEffect(() => {
+    carregar()
   }, [])
 
   const fila = useMemo(() => ordenarFila(consultas), [consultas])
@@ -49,6 +55,9 @@ export default function Consultas() {
         </button>
         <button role="tab" type="button" aria-selected={aba === 'todas'} className={estiloAba(aba === 'todas')} onClick={() => setAba('todas')}>
           Todas as consultas ({consultas.length})
+        </button>
+        <button type="button" className={`${estiloAba(false)} disabled:opacity-60`} onClick={carregar} disabled={carregando}>
+          ↻ Atualizar
         </button>
       </div>
 
