@@ -15,6 +15,15 @@ Global Solution 2026/2 · Front-End Design Engineering · FIAP 1TDS
 | ☕ **API Java (Render)** | https://cuidai-api.onrender.com · [repositório](https://github.com/enzoleiva2008-blip/cuidai-api) |
 | 🎬 **Vídeo (YouTube)** | _link_ ← trocar |
 
+## Funcionalidades
+
+- **Cadastro do cidadão** com validação de CPF, e-mail, telefone e Cartão SUS
+- **Agendamento de consulta** escolhendo médico e especialidade
+- **Fila inteligente** ordenada por prioridade e horário, com botão para atualizar
+- **Detalhe da consulta** com posição na fila e opção de cancelar
+- **Menu responsivo**, que no celular abre pelo ☰ e fecha com Esc
+- **Acessibilidade**: link para pular ao conteúdo, títulos de aba por página e avisos para leitores de tela
+
 ## Tecnologias
 
 - **React 19** + **Vite** + **TypeScript**
