@@ -22,6 +22,16 @@ export function Cabecalho() {
     setMenuAberto(false)
   }, [pathname])
 
+  // Fecha o menu do celular ao apertar Esc
+  useEffect(() => {
+    if (!menuAberto) return
+    function aoApertarTecla(evento: KeyboardEvent) {
+      if (evento.key === 'Escape') setMenuAberto(false)
+    }
+    document.addEventListener('keydown', aoApertarTecla)
+    return () => document.removeEventListener('keydown', aoApertarTecla)
+  }, [menuAberto])
+
   const estiloLink = ({ isActive }: { isActive: boolean }) =>
     `block rounded-lg px-3 py-2 font-medium transition ${
       isActive ? 'bg-marca-700 text-white' : 'text-slate-700 hover:bg-marca-50 hover:text-marca-800'
