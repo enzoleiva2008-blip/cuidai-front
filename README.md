@@ -82,6 +82,13 @@ Pré-requisito: **Node.js 20 ou mais novo**.
 	```bash
 	npm run build
 	```
+## Scripts disponíveis
+
+| Comando | O que faz |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Verifica os tipos e gera a versão de produção |
+| `npm run preview` | Abre a versão de produção localmente |
 
 ## Variáveis de ambiente
 
