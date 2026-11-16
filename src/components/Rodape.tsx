@@ -11,6 +11,7 @@ export function Rodape() {
         </div>
         <nav aria-label="Links do rodapé">
           <ul className="flex flex-col gap-1">
+            <li><Link className="hover:underline" to="/cadastro">Cadastre-se</Link></li>
             <li><Link className="hover:underline" to="/agendar">Agendar consulta</Link></li>
             <li><Link className="hover:underline" to="/consultas">Consultas e fila</Link></li>
             <li><Link className="hover:underline" to="/faq">Perguntas frequentes</Link></li>
